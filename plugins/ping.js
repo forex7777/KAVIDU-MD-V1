@@ -1,22 +1,26 @@
-const config = require('../config');
-const { cmd, commands } = require('../command');
-
+const config = require('../config')
+let fs = require('fs')
+const os = require("os")
+const { cmd, commands } = require('../command')
+const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
 cmd({
     pattern: "ping",
-    desc: "Check bot's response time.",
+    alias: ["speed","pong"],
+    react: "📡",
+    desc: "Check the bot's response time.",
     category: "main",
-    react: "🚀",
-    filename: __filename
+    filename: __filename,
 },
-async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
-    try {
-        const startTime = Date.now()
-        const message = await conn.sendMessage(from, { text: '> *⚕️PINGING....*' })
-        const endTime = Date.now()
-        const ping = endTime - startTime
-        await conn.sendMessage(from, { text: `> *⚡ SPEED : ${ping}ms*` }, { quoted: message })
-    } catch (e) {
-        console.log(e)
-        reply(`${e}`)
-    }
-})
+async (conn, mek, m, { from, reply }) => {
+	try{   
+		var initial = new Date().getTime(); 
+		let { key } = await conn.sendMessage(from, { text: "```🚀 Testing ping...!```" });
+		await sleep(500);
+		var final = new Date().getTime();
+		let pingTime = final - initial;
+		return await conn.sendMessage(from, { text: "*📡 Ping : " + pingTime + "ms*", edit: key });
+
+	} catch (e) {
+		console.log(e);
+	}
+});
