@@ -40,7 +40,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             '',
             ' *👨‍💻 YOUR DATA HACK SUCCESSFULLY 👩‍💻☣*',
             '',
-            'MD'
+            'KAVIDU-MD'
         ];
 
         for (const line of steps) {
