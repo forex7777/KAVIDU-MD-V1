@@ -5,7 +5,7 @@ cmd(
   {
     pattern: "menu",
     alise: ["list"],
-    react: "⚔️",
+    react: "📂",
     desc: "get cmd list",
     category: "main",
     filename: __filename,
@@ -40,13 +40,45 @@ cmd(
     }
   ) => {
     try {
-      let menu = {
-        main: "",
-        download: "",
-        group: "",
-        owner: "",
-        convert: "",
-        search: "",
+      let menu = {title: 'DOWNLOAD MENU 📥',
+                     //description: ``,
+                     : prefix + `downmenu`
+                  }, {
+                     title: 'MAIN MENU 🎀',
+                    //description: ``,
+                     id: prefix + `mainmenu`
+                  }, {
+                     title: 'MOVIE MENU 🎬',
+                    //description: ``,
+                     id: prefix + `extra`
+                  }, {
+                     title: 'SEARCH MENU 🔎',
+                     //description: ``,
+                     id: prefix + `searchmenu`
+                  }, {
+                     title: 'CONVERT MENU 🌀',
+                     //description: ``,
+                     id: prefix + `convertmenu`
+                  }, {
+                     title: 'GROUP MENU 🎩',
+                     //description: ``,
+                     id: prefix + `groupmenu`
+                  }, {
+                     title: 'OTHER MENU 👾',
+                     //description: ``,
+                     id: prefix + `othermenu`
+                  }, {
+                     title: 'OWNER MENU 👨‍💻',
+                     //description: ``,
+                     id: prefix + `ownermenu`
+                  }, {
+                     title: 'AI MENU 👨‍🔧',
+                     //description: ``,
+                     id: prefix + `aimenu`
+                  }, {
+                    title: 'FUN MENU 👨‍🔧',
+                    //description: ``,
+                    id: prefix + `funmenu`
       };
 
       for (let i = 0; i < commands.length; i++) {
@@ -55,9 +87,9 @@ cmd(
         }
       }
 
-      let madeMenu = `😺 *HelloW  ${pushname}*
+      let madeMenu = `🎭 *HelloW  ${pushname}*
 
-> *𝘸𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 𝘬𝘢𝘷𝘪-𝘮𝘥 🎗️*
+> **☠️ K A V I D U - M D ☠ -  LIST MENU ☠️**
 
 * ${menu.main}
 * ${menu.download}    
@@ -70,7 +102,7 @@ ${config.FOOTER}`;
 
       await robin.sendMessage(
         from,
-        { audio: { url: "https://files.catbox.moe/x1tr4y.mp3" }, mimetype: 'audio/mpeg', ptt: true },
+        { audio: { url: "" }, mimetype: 'audio/mpeg', ptt: true },
         { quoted: mek }
       );
 
