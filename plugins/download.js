@@ -11,7 +11,7 @@ let baseUrl;
 })();
 
 
-const yourName = "> MD";
+const yourName = "> KAVIDU-MD";
 
 //twitter dl (x)
 cmd({
