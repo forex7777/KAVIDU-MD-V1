@@ -2,7 +2,7 @@ const config = require('../config');
 const { cmd, commands } = require('../command');
 const os = require("os");
 const { runtime } = require('../lib/functions');
-const imageUrl = 'YOUR PHOTO URL';
+const imageUrl = 'https://i.ibb.co/Z12ByPbd/9307.jpg';
 
 cmd({
     pattern: "menu",
@@ -17,22 +17,22 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
     try {
         const selectionMessage = `
 ╭━━━━∙⋆⋅⋆∙━ ─┉─ • ─┉─⊷
-      *Hi 😈*  *${pushname}*
+      *Hi 👾*  *${pushname}*
       
     *Command List*
 ╰━━━━∙⋆⋅⋆∙━ ─┉─ • ─┉─⊷
 
   *╭────────────●●►*
-  *│1. DOWNLOAD MENU*
-  *│2. SEARCH MENU* 
-  *│3. AI MENU*
-  *│4. OWNER MENU*
-  *│5. GROUP MENU*
-  *│6. INFO MENU*
-  *│7. CONVERTER MENU*
-  *│8. RANDOM MENU*
-  *│9. WALLPAPERS MENU*
-  *│10. OTHER MENU*
+  *│1.📥DOWNLOAD MENU*
+  *│2.🔍SEARCH MENU* 
+  *│3.🎭AI MENU*
+  *│4.👤OWNER MENU*
+  *│5.🎯GROUP MENU*
+  *│6.👾INFO MENU*
+  *│7.🧬CONVERTER MENU*
+  *│8.💊RANDOM MENU*
+  *│9.🖼️WALLPAPERS MENU*
+  *│10.⚕️OTHER MENU*
   *╰────────────●●►*
 
 `;
